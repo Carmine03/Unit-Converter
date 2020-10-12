@@ -25,8 +25,6 @@ public class TemperatureConverter extends ConverterPane {
 			
 			fromUnit = getFromUnit();
 			toUnit = getToUnit();
-			System.out.println(fromUnit);
-			System.out.println(toUnit);
 			fromValue = getValueFrom();
 			double value;
 			double celsiusTemp;
@@ -34,7 +32,6 @@ public class TemperatureConverter extends ConverterPane {
 			try {
 				value = Double.parseDouble(fromValue);
 				if ((celsiusTemp = convertToCelsius(value, fromUnit)) >= -273.15) {
-					System.out.println(value);
 					result = convertToUnit(celsiusTemp, toUnit);
 					textOut.setText("" + df.format(result));
 				} else {

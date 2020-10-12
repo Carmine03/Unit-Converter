@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -81,15 +80,7 @@ public class ConverterPane extends BorderPane {
 		setCenter(hbox);
 		setBottom(button);
 	}
-
-	public ConverterPane(Node center) {
-		super(center);
-	}
 	
-	public ConverterPane(Node center, Node top, Node right, Node bottom, Node left) {
-		super(center, top, right, bottom, left);
-	}
-
 	public void setTitle(String newTitle) {
 		title = newTitle;
 		titleL.setText(title);

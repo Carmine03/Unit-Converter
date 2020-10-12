@@ -28,8 +28,6 @@ public class DistanceConverter extends ConverterPane {
 			
 			fromUnit = getFromUnit();
 			toUnit = getToUnit();
-			System.out.println(fromUnit);
-			System.out.println(toUnit);
 			fromValue = getValueFrom();
 			double value;
 			double meterLength;
@@ -37,7 +35,6 @@ public class DistanceConverter extends ConverterPane {
 			try {
 				value = Double.parseDouble(fromValue);
 				if ((meterLength = convertToMeter(value, fromUnit)) >= 0) {
-					System.out.println(value);
 					result = convertToUnit(meterLength, toUnit);
 					textOut.setText("" + df.format(result));
 				} else {
